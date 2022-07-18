@@ -1,0 +1,9 @@
+###
+GET http://localhost:3000/api/products?gender=kid
+
+###
+
+GET http://localhost:3000/api/products/kids_scribble_t_logo_tee
+
+###
+GET http://localhost:3000/api/search/solar
