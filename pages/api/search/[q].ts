@@ -31,9 +31,9 @@ const searchProducts = async (
   }
   q = q.toString().toLowerCase()
   await db.connect()
-  const products = await Product.find({
-    $text: { $search: q },
-  }).lean()
+  const products = await Product.find({ $text: { $search: q } })
+    .select('title images price inStock slug -_id')
+    .lean()
 
   return res.status(200).json(products)
 }
